@@ -155,6 +155,9 @@ def main():
     # Get and print the suggested move
     suggested_move = calc_player_move(player_hand, dealer_hand)
     print(f"Suggested move: {suggested_move}")
+    
+    # Keep window open until user closes it
+    input("Press Enter to exit...")
 
 if __name__ == '__main__':
     main()
