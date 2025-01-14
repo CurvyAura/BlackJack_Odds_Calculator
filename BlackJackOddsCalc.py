@@ -145,18 +145,24 @@ def handle_pair(pair_value, dealer_upcard):
         return 'hit'
 
 def main():
-    player_hand, dealer_hand = get_initial_hands()
-    print(f'Player hand: {player_hand}')
-    print(f"Dealer's face-up card: {dealer_hand[0]}")
-    
-    player_value = determine_hand_value(player_hand)
-    print("Player's hand value: ", player_value)
+    while True:
+        player_hand, dealer_hand = get_initial_hands()
+        print(f'Player hand: {player_hand}')
+        print(f"Dealer's face-up card: {dealer_hand[0]}")
+        
+        player_value = determine_hand_value(player_hand)
+        print("Player's hand value: ", player_value)
 
-    # Get and print the suggested move
-    suggested_move = calc_player_move(player_hand, dealer_hand)
-    print(f"Suggested move: {suggested_move}")
-    
-    # Keep window open until user closes it
+        # Get and print the suggested move
+        suggested_move = calc_player_move(player_hand, dealer_hand)
+        print(f"Suggested move: {suggested_move}")
+
+        # Ask if the user wants to run again
+        run_again = input("Do you want to run again? (y/n): ").strip().lower()
+        if run_again != 'y':
+            break
+
+    # Wait for user input before closing
     input("Press Enter to exit...")
 
 if __name__ == '__main__':
