@@ -1,5 +1,5 @@
 """
-Created by Brett Shalagan on 2025-01-13.
+Created by Brett S (CurvyAura) on 2025-01-13.
 
 This program calculates the best move for the player to win a game of Blackjack based on the player's hand and the dealer's face-up card,
 using a somewhat simplified version of the basic Blackjack strategy chart to determine the best move for the player.
